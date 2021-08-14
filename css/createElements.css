@@ -1,0 +1,14 @@
+
+button {
+  width: 200px;
+  padding: 10px;
+  margin: 10px;
+}
+
+li {
+  padding: 5px;
+}
+
+div#container {
+  padding: 30px;
+}
