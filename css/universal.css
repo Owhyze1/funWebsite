@@ -24,3 +24,10 @@ nav > a {
 nav > a:hover {
   background-color: rgb(226, 195, 109);
 }
+
+code {
+  background-color: rgb(241, 236, 236);
+  font-family: courier;
+  padding: 2px;
+  box-shadow: inset 1px 1px gray, 1px 1px 5px lightgray;
+}
