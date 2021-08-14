@@ -1,0 +1,26 @@
+body {
+  margin: 0;
+  background-color: rgba(241, 236, 237, 0.836);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+header {
+  background-color: rgb(238, 205, 115);
+  padding: 10px;
+  text-align: center;
+}
+
+nav {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: large;
+  /* font-weight: bold; */
+  /* background-color: azure; */
+}
+
+nav > a {
+  padding: 20px;
+}
+
+nav > a:hover {
+  background-color: rgb(226, 195, 109);
+}
