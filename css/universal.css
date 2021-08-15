@@ -1,3 +1,9 @@
+:root {
+  --banner-gold: rgb(238, 205, 115);
+  --darker-banner: rgb(226, 195, 109);
+  --page-color: rgb(241, 236, 236);
+}
+
 body {
   margin: 0;
   background-color: rgba(241, 236, 237, 0.836);
@@ -5,7 +11,7 @@ body {
 }
 
 header {
-  background-color: rgb(238, 205, 115);
+  background-color: var(--banner-gold);
   padding: 10px;
   text-align: center;
 }
@@ -22,11 +28,11 @@ nav > a {
 }
 
 nav > a:hover {
-  background-color: rgb(226, 195, 109);
+  background-color: var(--darker-banner);
 }
 
 code {
-  background-color: rgb(241, 236, 236);
+  background-color: var(--page-color);
   font-family: courier;
   padding: 2px;
   box-shadow: inset 1px 1px gray, 1px 1px 5px lightgray;
