@@ -1,0 +1,15 @@
+div#container {
+  padding-left: 20px;
+}
+
+div#code {
+  border: 1px solid gray;
+  background-color: var(--code-color);
+  width: 250px;
+  margin-left: 50px;
+  padding-left: 10px;
+
+  line-height: 30px;
+  font-family: courier;
+  box-shadow: inset 1px 1px gray, 1px 1px 5px lightgray;
+}

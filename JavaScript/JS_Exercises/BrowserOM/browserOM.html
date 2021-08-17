@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Browser Object Model</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/universal.css">
+    <link rel="stylesheet" href="../css/browserOM.css">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="javascript.html">JavaScript</a>
+        <a href="interviewing.html">Interviewing</a>
+        <a href="HackForLA.html">Hack For LA</a>
+      </nav>
+      <h1>Browser Object Model</h1>
+    </header>
+    <div id="container">
+      <p>Browser Object Model (BOM) represents the current browser window.</p>
+      <p>Main Objects available inside the window</p>
+      <ul>
+        <li>document</li>
+        <li>history</li>
+        <li>location</li>
+        <li>screen</li>
+        <li>navigator</li>
+      </ul>
+      <h3>The document object</h3>
+      <p>The document object represents web page's structure and content in a tree format, where the tree nodes represent HTML elements and text content. </p>
+
+      <h3>The history object</h3>
+      <p>Holds data about the URL's that have been visited </p>
+
+      <h3>The location object</h3>
+      <p>Used to access the URL of the document currently loaded in the window and also provides information about the general navigation functionality of the document</p>
+
+      <h3>The screen object</h3>
+      <p>Holds info about screen like width and height</p>
+
+      <h3>The navigator object</h3>
+      <p>Contains information about user's browser</p>
+      <br>
+
+      <p>
+        To access browser object model, use the window object <code>window.document.getElementById('topbar')</code> <br><br>
+        OR you can simply use <code>document.getElementById('topbar')</code>
+        because all the global javascipt objects, functions, and variables <br><br> automatically bec0me members of the window object.
+      </p>
+
+      <h3>Width of Window</h3>
+      <code>window.innerWidth</code>
+
+      <h3>Height of Window</h3>
+      <code>window.innerHeight</code>
+      <p></p>
+
+      <h3>Other Window Methods</h3>
+      <ul>
+        <li>setTimeout( ) - performs action after specified amount of time</li>
+        <li>setInterval( ) - performs action after a set interval of time</li>
+        <li>alert( ) - display alert box</li>
+        <li>confirm( ) - display confirm dialog box with "OK" and "Cancel" buttons</li>
+        <li>prompt( ) - displays dialog box to get input from user</li>
+        <li>open( ) - opens an entered URL in a new tab</li>
+        <li>close( ) - closes the current window</li>
+      </ul>
+
+      <h2>Screen and Navigator objects</h2>
+      <section>
+        <h3>The screen object</h3>
+        <p>Holds informaiton about the browser screen</p>
+        <ul>
+          <li>screen width</li>
+          <li>screen height</li>
+          <li>availableWidth</li>
+          <li>availableHeight</li>
+          <li>colorDepth</li>
+          <li>pixelDepth</li>
+        </ul>
+        <p>To access the screen object, you can do <code>window.screen</code> or you can simply write <code>screen</code> and it returns the same properties.</p>
+        <p>This returns the following example object <br>
+          <div id="code">
+              { <br>
+
+                availWidth: 1536, <br>
+                availHeight: 824, <br>
+                width: 1536, <br>
+                height: 864, <br>
+                colorDepth: 24, <br>
+                ... <br>
+              }
+          </div>
+        </p>
+      </section>
+
+      <section>
+        <h3>The navigator object</h3>
+        <p>Contains information about the browser where the application is running</p>
+        <p>You can access it by using <code>window.navigator</code></p>
+        <p>You can use the user agent string to get informaiton about the operating system and the browser.</p>
+        <p>Access it with <code>navigator.userAgent</code></p>
+        <p>Take the output and put it into a user agent parser, found on Google, to decipher the information.</p>
+        <p>Use the <code>navigator.onLine</code> property to see if a user has an active internet connection (returns true).</p>
+      </section>
+
+      <section>
+        <h3>The history object</h3>
+        <p>An array object of URLs previously visited by the user</p>
+        <ul>
+          Two Functions
+          <li>back( )</li>
+          <li>forward( )</li>
+        </ul>
+        <p>These functions allow you to go to the previous or next page</p>
+        <p>Calling this function <code>window.history.back()</code> will load the previous page</p>
+      </section>
+
+      <section>
+        <h3>The location object</h3>
+        <p>Used to get details of current page address and can redirect browser to new page in same window.</p>
+        <p>Use <code>window.location</code> to get a Location object</p>
+        <p><code>window.location.href</code> is the current web addres</p>
+        <p><code>window.location.hostname</code> returns the host name (i.e. www.google.com)</p>
+        <p><code>window.location.pathname</code> shows the path after the host name</p>
+        <p><code>window.location.search</code> returns a search string (anything after ?)</p>
+        <p><code>window.location.assign('www.google.com')</code> loads the website into the browser</p>
+      </section>
+
+    </div>
+
+  </body>
+</html>
