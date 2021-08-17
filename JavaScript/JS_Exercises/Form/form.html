@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Creating Forms</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../Home/universal.css">
+    <link rel="stylesheet" href="form.css"
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="javascript.html">JavaScript</a>
+        <a href="interviewing.html">Interviewing</a>
+        <a href="HackForLA.html">Hack For LA</a>
+      </nav>
+      <h1>Creating Forms</h1>
+    </header>
+      <form>
+        <label for="first-name">First Name</label>
+        <input type="text" id="first-name" name="first">
+        <br>
+        <label for="last-name">Last Name</label>
+        <input type="text" id="last-name" name="last">
+        <br>
+
+        <input type="checkbox" id="select-all" name="all-souvenirs">
+        <label for="select-all">Select All</label>
+        <br>
+
+        <fieldset>
+          <legend>Pick Items to Order</legend>
+
+          <input type="checkbox" id="t-shirt" name="souvenirs" value="t-shirt">
+          <label for="t-shirt">T-Shirt</label>
+          <br>
+          <input type="checkbox" id="water-bottle" name="souvenirs" value="water-bottle">
+          <label for="water-bottle">Water Bottle</label>
+          <br>
+          <input type="checkbox" id="magnet" name="souvenirs" value="magnet">
+          <label for="magnet">Magnet</label>
+        </fieldset>
+
+        <br>
+        <input type="submit" id="submit-button">
+      </form>
+  </body>
+  <script src="form.js"></script>
+</html>
