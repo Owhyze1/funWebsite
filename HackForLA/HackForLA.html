@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hack For LA</title>
+  <link rel="stylesheet" href="HackForLA.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <h1>Hack For LA</h1>
+  <h2>Process for Installing and Running Home Unite Us Calendaring Service</h2>
+
+  <h3>Steps</h3>
+  <ol>
+    <li>Fork Repo to Owhyze1 github</li>
+    <li>Create hfla directory in C:/Coding</li>
+    <li>git clone to hfla folder</li>
+    <li>Install Flask
+      <ul>
+        <li>In project folder --> <code>py -3 -m venv venv</code></li>
+        <li><code>venv\Scripts\activate</code></li>
+        <li>pip install flask</li>
+        <li>Upgrade flask --> <code>python.exe -m pip install --upgrade pip</code></li>
+      </ul>
+    </li>
+    <li>Run Flask application</li>
+      <ul>
+        <li>Error --> No Module named flask</li>
+        <li><a href="https://stackoverflow.com/questions/65694813/import-flask-could-not-be-resolved-from-source-pylance">Solution</a></li>
+        <li>Open new command window and use command pip show flask to see where flask is installed</li>
+        <li>New error --> <code>WARNING: Package(s) now found: Flask</code></li>
+        <li>Use <code>pip install flask</code></li>
+        <li>now <code>pip show flask</code> works</li>
+      </ul>
+    <li>Retry on Linux</li>
+      <ul>
+        <li>Follow instructions above for installing flask on linux</li>
+        <li>flask run starts but...</li>
+        <li>ERROR --> <code>ModuleNotFoundError: No module named 'bson'</code></li>
+      </ul>
+    <li>FINAL SOLUTION</li>
+      <ul>
+        <li>URL: <a href="https://code.visualstudio.com/docs/python/environments#_global-and-virtual-environments">VS Code Docs</a></li>
+        <li>Navigate to HomeUniteUs project folder and type the following into linux command line</li>
+        <li>pip3 install -r requirements.txt</li>
+      </ul>
+  </ol>
+
+  <h3>Recap</h3>
+  <p>Fork Repo to Owhyze1 github</p>
+  <p>Create hfla directionm on WSL2</p>
+  <p>WSL2 command line --> python3 --version</p>
+  <p>Python 3.8.10</p>
+  <p><code>pip3 install -r requirements.txt</code> to get the Flask server set up</p>
+  <p>Type <code>flask run</code> into command line</p>
+  <p>Open virtual environment for Python</p>
+  <p>install each dependency individually use pip install</p>
+  <p>then go to app folder and then do npm install</p>
+  <p>npm run dev</p>
+</body>
+<script type="text/javascript" src="HackForLA.js"></script>
+</html>
