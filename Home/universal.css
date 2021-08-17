@@ -1,0 +1,41 @@
+:root {
+  --banner-gold: rgb(238, 205, 115);
+  --darker-banner: rgb(226, 195, 109);
+  --page-color: rgb(241, 236, 236);
+  --code-color: rgb(196, 194, 194);
+}
+
+body {
+  margin: 0;
+  background-color: rgba(241, 236, 237, 0.836);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+header {
+  background-color: var(--banner-gold);
+  padding: 10px;
+  text-align: center;
+}
+
+nav {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: large;
+  /* font-weight: bold; */
+  /* background-color: azure; */
+}
+
+nav > a {
+  padding: 20px;
+}
+
+nav > a:hover {
+  background-color: var(--page-color);
+}
+
+code {
+  background-color: var(--code-color);
+  font-family: courier;
+  padding: 2px;
+  box-shadow: inset 1px 1px gray, 1px 1px 5px lightgray;
+  margin: 2px;
+}
