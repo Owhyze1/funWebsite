@@ -4,7 +4,7 @@
     <title>Creating Forms</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../Home/universal.css">
-    <link rel="stylesheet" href="form.css"
+    <link rel="stylesheet" href="form.css">
   </head>
   <body>
     <header>
@@ -16,7 +16,9 @@
       </nav>
       <h1>Creating Forms</h1>
     </header>
-      <form>
+    <h2 class="subtitle">Checkboxes</h2>
+    <div id="container">
+      <form class="box-shadow" id="order-form">
         <label for="first-name">First Name</label>
         <input type="text" id="first-name" name="first">
         <br>
@@ -42,8 +44,12 @@
         </fieldset>
 
         <br>
-        <input type="submit" id="submit-button">
+        <input type="submit" id="submit-button" value="submitted">
       </form>
+      <div id="display-div" class="box-shadow"></div>
+    </div>
+    </div>
   </body>
-  <script src="form.js"></script>
+  <script src="checkbox.js"></script>
+  <script src="formInput.js"></script>
 </html>
