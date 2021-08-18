@@ -1,0 +1,32 @@
+.class-code {
+  padding: 10px 10px 10px 50px;
+  margin: 10px;
+  border: 1px solid darkslategrey;
+  box-shadow: 18px 18px 18px -4px gray;
+
+  width: fit-content;
+  height: fit-content;
+}
+
+.class-code > p {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.title {
+  font-weight: bold;
+  font-size: large;
+  border-bottom: 1px solid darkslategray;
+}
+
+.indent-1 {
+  text-indent: -40px;
+}
+
+.indent-2 {
+  text-indent: -20px;
+}
+
+#container {
+  display: flex;
+  flex-direction: row;
+}
