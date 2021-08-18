@@ -1,6 +1,6 @@
 .class-code {
   padding: 10px 10px 10px 50px;
-  margin: 10px;
+  margin-top: 20px;
   border: 1px solid darkslategrey;
   box-shadow: 18px 18px 18px -4px gray;
 
@@ -33,4 +33,5 @@
 #container {
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
 }
