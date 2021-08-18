@@ -1,0 +1,9 @@
+li {
+  padding: 5px;
+}
+
+li:hover {
+  background-color: lavenderblush;
+  padding: 5px;
+  width: 50%;
+}
