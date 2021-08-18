@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript Classes/</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="class.js"></script>
+    <link rel="stylesheet" href="../../../Home/universal.css">
+    <link rel="stylesheet" href="class.css">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="../../../Home/index.html">Home</a>
+        <a href="../../javascript.html">JavaScript</a>
+        <a href="../../../Notes/interviewing.html">Interviewing</a>
+        <a href="../../../HackForLA/HackForLA.js">Hack For LA</a>
+      </nav>
+      <h1>JavaScript Classes</h1>
+    </header>
+
+    <div id="container">
+      <div class="class-code">
+        <p class="indent-1 title">Person Class</p>
+        <p class="indent-1">class Person {</p>
+        <p class="indent-2">constructor(first, last, age) {</p>
+        <p>this.first = first;</p>
+        <p>this.last = last;</p>
+        <p>this.age = age;</p>
+        <p class="indent-2">}</p>
+        <p class="indent-2">howOld = ( ) => {</p>
+        <p>return this.age;</p>
+        <p class="indent-2">}</p>
+        <p class="indent-1">}</p>
+      </div>
+
+      <div class="class-code">
+        <p class="indent-1 title">Instance of Person Class</p>
+        <p class="indent-1">var p = new Person("James", "Bond", 41);</p>
+        <p class="indent-1">var disp = `His name is ${p.last}, ${p.first} ${p.last}`;</p>
+        <p class="indent-1">var age = p.howOld( )</p>
+        <br>
+        <p class="indent-1">console.log(disp);</p>
+        <p class="indent-1">console.log(age)</p>
+      </div>
+
+      <div class="class-code">
+        <p class="indent-1 title">Console Output</p>
+        <p class="indent-1">His name is Bond, James Bond</p>
+        <p class="indent-1">41</p>
+      </div>
+    </div>
+  </body>
+</html>
