@@ -1,7 +1,18 @@
+.subtitle {
+  text-align: center;
+}
+
+
+.box-shadow {
+  border: 1px solid rgb(204, 238, 238);
+  box-shadow: 8px 8px 8px -4px lightblue;
+}
+
 form {
   background-color: lightcyan;
   padding: 10px;
   width: fit-content;
+  margin-top: 20px;
 }
 
 input,
@@ -15,3 +26,19 @@ input#submit-button {
   padding: 10px;
   width: 100%;
 }
+
+div#container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+div#display-div {
+  margin-top: 20px;
+
+  width: 230px;
+  height: 325px;
+  padding: 10px;
+  background-color: lightcyan;
+}
+
