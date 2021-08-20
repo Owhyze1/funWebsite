@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Callbacks</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../Home/universal.css">
+    <link rel="stylesheet" href="Callbacks.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+            integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+            crossorigin="anonymous"></script>
+    <script src="Callbacks.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Callbacks and Promises</h1>
+    </header>
+    <div id="container">
+
+      <h3>Promise</h3>
+      <p>Handles asynchronous operations by deferring code execution until
+        an asynchronous request is completed. This allows other operations to
+        keep running without interruption.
+      </p>
+      <p>Promises prevent extreme nesting caused with chaining GET requests.</p>
+
+      <h4>Three States of a Promise</h4>
+      <ol>
+        <li>Pending</li>
+        <li>Fulfilled</li>
+        <li>Rejected</li>
+      </ol>
+
+      <h4>Promise Syntax</h4>
+      <div class="class-code">
+        <p class="hanging-indent">const mPromise = new Promise((resolve, reject) => {</p>
+        <p>// Call resolve() when operation is complete</p>
+        <p>// Call reject() when operation fails</p>
+        <p class="hanging-indent">}</p>
+      </div>
+
+      <h4>Methods: <code>then()</code> and <code>catch()</code></h4>
+      <p><code>then()</code> is called when resolve( ) is executed. It
+      receives data passed into the resolve( ) method as arguments.</p>
+      <p><code>catch()</code> method is called when the reject( ) method is
+      executed. It receives data passed into the reject( ) method as arguments.</p>
+    </div>
+  </body>
+</html>
