@@ -16,11 +16,21 @@ div#container {
   justify-content: center;
   padding-top: 30px;
 }
+div#outer-watch-container {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  background-color: blue;
 
-div#watch-container {
+  width: 400px;
+  height: 400px;
+}
+
+div#inner-watch-container {
   background-color: lightblue;
   width: 400px;
   height: 400px;
+  position: relative;
 }
 
 div#watch-info {
@@ -40,9 +50,32 @@ img#watch {
   width: 400px;
   height: auto;
   background-color: lightgreen;
-
   position: relative;
   z-index: 1;
+}
+
+div#watch-text-div{
+  z-index: 2;
+
+  /* Center vertically and horizontally */
+  position: absolute;
+  top: 30%;
+  left: 35%;
+  display: flex;
+  align-items: center;
+
+  /* background-color: rgb(150, 146, 147); */
+  color: white;
+  font-weight: bold;
+  min-width: 110px;
+  max-width: 125px;
+  height: 150px;
+}
+
+p#watch-text {
+  background-color: blue;
+  height: auto;
+  width: 100%;
 }
 
 div#watch-colors {
@@ -94,18 +127,3 @@ p#section-title {
   margin-bottom: 10px;
 }
 
-div#watch-text {
-  position: relative;
-  z-index: 2;
-
-  /* Center vertically and horizontally */
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  background-color: lightpink;
-  color: white;
-  font-weight: bold;
-  width: 150px;
-  height: auto;
-}
