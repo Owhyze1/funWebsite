@@ -5,8 +5,8 @@ var addItemsListItem = document.getElementById("add-items");
 var addAndRemoveListItem = document.getElementById("add-and-remove");
 var browserObjectModelListItem = document.getElementById("browser-object-model");
 
-var createHTMLelementsHref ="Z:/home/owhyze1/coding/websitePractice/html/createElements.html";
-var formeventsHref = "Z:/home/owhyze1/coding/websitePractice/html/form.html";
+var createHTMLelementsHref = 'JS_Exercises/CreateElements/createElements.html';
+var formeventsHref = 'JS_Exercises/Form/form.html';
 var mouseeventsHref = "Z:/home/owhyze1/coding/websitePractice/html/mouseEvents.html";
 var addItemsHref = "Z:/home/owhyze1/coding/websitePractice/html/addToList.html";
 var addAndRemoveItemsHref = "Z:/home/owhyze1/coding/websitePractice/html/addAndRemoveItems.html";
