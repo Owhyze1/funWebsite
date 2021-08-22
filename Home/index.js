@@ -1,17 +1,20 @@
-
+// import { javascript } from 'links.js';
 
 var button = document.getElementById("js");
 var interviewButton = document.getElementById("interviewing");
 var hackForLaButton = document.getElementById("hackforla");
 
 button.addEventListener("click", function() {
-  location.href = "Z:/home/owhyze1/coding/websitePractice/JavaScript/javascript.html" ;
+  console.log('Button clicked');
+  location.href = 'javascript.html';
 });
 
 interviewButton.addEventListener("click", function() {
-  location.href = "Z:/home/owhyze1/coding/websitePractice/html/interviewing.html";
+  console.log('Opening interviewing page');
+  location.href = 'interviewing.html';
 });
 
 hackforla.addEventListener("click", function() {
-  location.href = "Z:/home/owhyze1/coding/websitePractice/html/HackForLA.html";
+  console.log('Opening Hack for LA page');
+  location.href = 'HackForLA.html';
 });
