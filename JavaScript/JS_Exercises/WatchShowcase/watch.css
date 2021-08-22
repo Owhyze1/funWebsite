@@ -76,6 +76,9 @@ p#watch-text {
   background-color: blue;
   height: auto;
   width: 100%;
+
+  font-size: x-large;
+  font-family: Helvetica, "Trebuchet MS", Verdana, sans-serif;
 }
 
 div#watch-colors {
