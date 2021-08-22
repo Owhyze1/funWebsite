@@ -9,6 +9,9 @@ function decrementTime(hours, minutes, seconds) {
 
   // console.log(`Starting time = ${hours}:${minutes}:${seconds}`);
 
+  if (hours < 0 || minutes < 0 || seconds < 0)
+    return;
+
   var lessThanTen = (time) => {
     return (time >= 0 && time < 10) ? "0" + time : time;
   }
