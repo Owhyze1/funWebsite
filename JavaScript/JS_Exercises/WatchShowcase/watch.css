@@ -54,6 +54,17 @@ img#watch {
   z-index: 1;
 }
 
+img#heart {
+  max-width: 125px;
+  width: 110px;
+  height: auto;
+  background-color: black;
+
+  position: relative;
+  z-index: 0;
+  bottom: 60%;
+}
+
 div#watch-text-div{
   z-index: 2;
 
@@ -73,7 +84,6 @@ div#watch-text-div{
 }
 
 p#watch-text {
-  background-color: blue;
   height: auto;
   width: 100%;
 
@@ -87,7 +97,7 @@ div#watch-colors {
   justify-content: space-between;
   width: 300px;
   position: relative;
-  z-index: 3;
+  z-index: 4;
 }
 
 div#red   { background-color: #ca3d22; }
