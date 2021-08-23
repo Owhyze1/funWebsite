@@ -1,4 +1,3 @@
-const http = require('http');
 const express = require('express');
 const fs = require('fs');
 
@@ -27,22 +26,4 @@ app.get('/', (request, response) => {
 
 app.listen(port, () => {
   console.log(`Listening at http://localhost:${port}`);
-  // __dirname = '/home/owhyze1/coding/websitePractice'
-})
-
-// const server = http.createServer((req, res) => {
-//   res.writeHeader(200, {'Content-Type': 'text/html'});
-//   fs.readFile('index.html', function(err, html) {
-//     if (err) {
-//       res.writeHeader(404);
-//       res.write('Whoops! File not found!');
-//     } else {
-//       res.write(html);
-//     }
-//     res.end();
-//   });
-// });
-
-// server.listen(port, hostname, () => {
-//   console.log(`Server running at http://${hostname}:${port}/`);
-// });
+});
