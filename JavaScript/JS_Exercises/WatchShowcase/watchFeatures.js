@@ -11,6 +11,7 @@ if (timeButton) {
   timeButton.addEventListener('click', function() {
     // move heart image and text div to correct position
     clearInterval(clock);
+    // reset position of heart and watch text, if needed
     heartImage.style.zIndex = 0;
     heartImage.alt = 'watch screen';
     divForTextElement.style.alignItems = 'center';
@@ -42,16 +43,29 @@ if (timeButton) {
 }
 
 if (heartRateButton) {
+
+  function heartAnimation(heart) {
+    let keyframes = [{ width: '110px'},
+                     {width: '125px'},
+                     { width: '110px'}
+                    ];
+    heart.animate(keyframes, {duration: 1250, iterations: Infinity});
+  }
+
   heartRateButton.addEventListener('click', function() {
     clearInterval(clock);
 
     heartImage.style.zIndex = 3;
     heartImage.alt = 'Pulsing Heart';
-    // heartImage.style.transitionProperty = 'width';
-    // heartImage.style.transitionDuration = '3s';
+    heartImage.title = 'Pulsing Heart';
+    heartAnimation(heartImage);
+
+    // move text element to bottom of watch screen
     divForTextElement.style.alignItems = 'flex-end';
     divForTextElement.style.paddingLeft = '5px';
     textElement.innerHTML = '78';
+    textElement.alt = 'Heart Rate';
+    textElement.title = 'Heart Rate';
   });
 }
 
