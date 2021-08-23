@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>React</title>
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <link rel="stylesheet" href="../Home/universal.css">
+    <link rel="stylesheet" href="reactNotes.css">
+  </head>
+  <body>
+    <header>
+      <h1>React Notes</h1>
+    </header>
+    <div id="container">
+      <section>
+        <h2>React</h2>
+        <p>JavaScript library for building fast and interative
+          user interfaces.</p>
+          <p>Created by FaceBook in 2011.</p>
+          <p>Most popular library for building user interfaces</p>
+      </section>
+
+      <section>
+        <h3>React Components</h3>
+        <p>An entire React application can be modelled as a set of
+          independent, isolated, and reusable components, used to design
+          complex layouts. </p>
+          <p>Websites can be split into smaller and smaller components</p>
+      </section>
+
+      <section>
+        <h3>The App component</h3>
+        <p>Every React app has at least one component referred to as the  App component</p>
+        <p>The App component represents the React app and all other components are placed in it</p>
+        <p>This gives it a tree-like component hierarchy</p>
+      </section>
+
+      <section>
+        <h3>Summary</h3>
+        <p>React is a library, which means it has a very specific purpose.
+          It defines user interfaces, also called Views. </p>
+          <p>It can be used for part of your application, because it only
+            handles the views. Contrast this with Angular, which has built-in
+            support for network requests, etc.
+          </p>
+      </section>
+
+      <h2>Single Page Applications (SPA) and Multiple Page Applications (MPA)</h2>
+
+      <section>
+        <h3>Single Page Application (SPA)</h3>
+        <p>App that works in the browser without requiring page reload
+          during use.
+        </p>
+        <p>A sole HTML page that loads all other content using JavaScript</p>
+        <p>Examples: FaceBook, GMail, Instagram, Trello</p>
+      </section>
+
+      <section>
+        <h3>Multi-Page Application (MPA)</h3>
+        <p>Every change sends request to the server to render a new page
+          in the browser</p>
+        <p>More "traditional" Websites</p>
+      </section>
+
+      <p>React can be used for both SPAs and MPAs, but is mostly used for
+        SPAs.
+      </p>
+
+      <h1>Creating a React Application</h1>
+
+      <section>
+        <h3>Intro to "create-react-app" tool</h3>
+        <p>Installs all the tops and libraries and packages required
+          to build a React application.
+        </p>
+        <p>Creates default configuration for project</p>
+        <p>Adds starter files for app</p>
+      </section>
+
+      <section>
+        <h3>To create a React App</h3>
+        <div class="class-code">
+          <p>npx crate-react-app appName</p>
+          <p>cd appName</p>
+          <p>npm start</p>
+        </div>
+      </section>
+
+      <section>
+        <h3>What is npm and npx?</h3>
+        <h4>npm (node package manager)</h4>
+        <p>It manages 3rd party packages and libraries for JavaScript</p>
+        <p>It is installed automatically when NodeJS is installed</p>
+        <h4>npx</h4>
+        <p>npx is a node package runner that downloads and installs packages
+          temporarily
+        </p>
+      </section>
+
+      <section>
+        <h3>React Program Structure</h3>
+        <p>ReactDOM library is used to manipulate the browser DOM</p>
+      </section>
+
+      <h1>Introduction to JSX</h1>
+
+      <section>
+        <h3>JSX</h3>
+        <p>A syntax extension in JavaScript that defines React elements
+          with a syntax very similar to HTML </p>
+        <p>It defines the look of the UI, i.e., the structure of the
+          React Components.
+        </p>
+        <p>JSX combines rendering logic with other UI locgic (e.g.
+          event handling, state changing, data displaying, etc)
+        </p>
+      </section>
+
+      <section>
+        <h3>Babel</h3>
+        <p>JSX code gets converted to JavaScript by Babel </p>
+        <p>It uses React.createElement( ), which is imported
+        from the React module in the <code>import React from 'React'</code></p>
+        <p>The React.createElement( ) method can have 3 arguments</p>
+        <ol>
+          <ul>Element name</ul>
+          <ul>Properties of attributes</ul>
+          <ul>Child components</ul>
+        </ol>
+        <p>JSX code is optional. You can write in JavaScript, but it's more
+          difficult to read
+        </p>
+      </section>
+
+      <section>
+        <h3>Custom Components</h3>
+        <p>HTML elements have the first argument of the React.createElement( ) method
+          in lowercase and in quotations. Custom elements are passed as they are
+          written in JSX without quotations.
+        </p>
+      </section>
+
+      <section>
+        <h3>Styling React Elements</h3>
+        <p>Two options</p>
+        <ol>
+          <li>Inline Styles</li>
+          <li>External Style</li>
+        </ol>
+        <p>Inline styles are written as an object within another object, that is the
+          value of the <code>style</code> attributes. The keys are the CSS properties.
+          Dashes are removed and camel case is used instead. The values are the CSS property
+          values enclosed in quotation marks.
+        </p>
+        <p>The problem with inline styles is that you cannot use a lot of CSS properties,
+          such as media queries, pseudo classes, pseudo elements, etc.
+        </p>
+        <p>It is adviseable <span style="font-weight: bold">NOT</span> to use the id attribute because it does not allow
+          for the reusability of components
+        </p>
+      </section>
+
+      <section>
+        <h3>Create React Components Dynamically</h3>
+        <p>You can use an array and the <code>map()</code> function to
+        dynamically display components</p>
+      </section>
+
+      <section>
+        <h3>The "key" property</h3>
+        <p>React uses this property to determine which items are changed, added, or
+          removed in dynamically generatd lists
+        </p>
+        <p>It must UNIQUELY identify the list item</p>
+        <p>It must be given to OUTERMOST elements being rendered by the list</p>
+
+        <p>You can add an "id" property to the object or generate it dynamically</p>
+      </section>
+
+      <section>
+        <h3>Component</h3>
+        <p>Lets you split the UI into independent, reusable pieces</p>
+        <p>JavaScript class or function that accepts data and returns a React
+          element, describing how a section looks
+        </p>
+        <p>Two Types of Components</p>
+        <ol>
+          <li>Functional</li>
+          <li>Class-based</li>
+        </ol>
+      </section>
+
+      <section>
+        <h3>Exporting Modules</h3>
+        <p>Two Ways to Export</p>
+        <ol>
+          <li>Default Export - export ONLY ONE module from file</li>
+          <li>Name Export - export MULTIPLE modules from the same file</li>
+        </ol>
+        <p>Named exports have to be imported under the same name. The name can be changed
+          if it is imported as <code>import {namedExport as newName} from './namedExportLocation';</code>
+        </p>
+      </section>
+
+      <section>
+        <h3>Passing Data to Components with Props</h3>
+        <p>Add a parameter to the functional component and use parameter object keys
+          in the inside of the functional component
+        </p>
+        <p>Typically name the parameter: props</p>
+      </section>
+
+      <section>
+        <h3>Intro to "CSS Modules" tool</h3>
+        <p>Global styles add a dependency between different components.</p>
+        <p>To make components truly independent, use style classes scoped locally
+          to the component.
+        </p>
+        <p>CSS Modules create a local scope for CSS Classes. A unique class name is used
+          for all classes in the CSS module file using the following:
+        </p>
+        <ul>
+          <li>file name</li>
+          <li>class name</li>
+          <li>random hash value</li>
+        </ul>
+        <p>A CSS Modules compiler creates this unique name, as well as a CSS compiled file
+          and a JavaScript file. This JavaScript object is what will be used inside the
+          the components to add classes to React elements.
+        </p>
+        <p>CSS Modules compiler is automatically installed when using create-react-app</p>
+        <p>Using CSS Module</p>
+        <ol>
+          <li>Create a CSS module file as fileName.module.css</li>
+          <li>Add CSS properties to the module file</li>
+          <li>Import the file into the appropriate JS file</li>
+          <li>Pass the class name as an object using dot notation i.e.
+            <code>className={classes.BlogCard}</code>
+          </li>
+        </ol>
+      </section>
+
+      <h1>Stateful and Stateless Components</h1>
+
+      <section>
+        <h3>Stateful v. Stateless</h3>
+        <p>Stateful Components - Components WITH state that are used when you want
+          to add functionality
+        </p>
+        <p>Stateless Components - Components WITHOUT state that are used only show
+          something on the screen
+        </p>
+      </section>
+
+      <section>
+        <h3>State</h3>
+        <p>State is similar to props, but is <b>private</b> and fully controlled by
+        the component. </p>
+        <p>It is an <b>object</b> and can hold any type of value</p>
+        <p>State functionality comes from React's Component class</p>
+        <p>Two Major Types of Components</p>
+        <ul>
+          <li>Stateful Components</li>
+          <li>Stateless Components</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Stateful Components</h3>
+        <p>Characteristics</p>
+        <ul>
+          <li>Class-based or Container or Smart components</li>
+          <li>Have a state object</li>
+          <li>Keep track of changing data via state object</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Stateless Components</h3>
+        <p>Characteristics</p>
+        <ul>
+          <li>Function-based or Presentational or Dumb components</li>
+          <li>NO state object</li>
+          <li>Print what is given to them via props or they ALWAYS render
+            the same thing
+          </li>
+        </ul>
+        <p><b>NOTE:</b> A stateless component can have stateful components
+        inside it</p>
+      </section>
+
+      <section>
+        <h3>Creating a Class Component</h3>
+        <p>Use the <b>extends</b> keyword with the class name as
+        <code>class App extends Component</code></p>
+        <p>Import the <b>Component</b> clas from react as an object OR
+        extend the class using <code>React.Component</code></p>
+        <p>Do <b>NOT</b> use <b>const</b> or <b>let</b> keywords because all variables
+        and functions are now properties of the class</p>
+        <p>Do <b>NOT</b> use a return statement. The Component gives the class
+        access to a method called <b>render</b>, which triggers all JSX code or React
+        elements. This <b>render</b> method is called every time a component is
+        created or updated </p>
+        <p>Must use the <b>this</b> keyword when referring to any variables
+        or functions inside the class</p>
+      </section>
+
+      <section>
+        <h3>Using State Property</h3>
+        <p>The Component class provides access to a state property that is
+          used to manage the state of components
+        </p>
+        <p>At any time, the state property stores the current state of the
+          component --> <code>this.state = { showBlogs: true }</code>
+        </p>
+
+        <p>The Component class also provides access to a method called
+          <b>setState</b>. This method is used to update the state object
+          and run the render method again. Example: <code>this.setState({showBlogs:
+          false})</code></p>
+
+        <p>When using the <b>setState</b> method, first it updates the state object
+        then it calls the render method. Then, the render method executes all the
+         code of the updated state</p>
+
+         <p>The <b>setState</b> method is <b>ASYNCHRONOUS</b>. This is a problem
+        when you are using the current state to update the next state. To avoid
+        any issues, <b>setState</b> provides access to the previous state and props
+        so that you can use those to update the next state. Example:
+        <code>this.setState((prevState, prevProps) => { return {showBlogs:
+          !prevState.showBlogs }});</code></p>
+
+      </section>
+
+      <section>
+        <h3></h3>
+      </section>
+    </div>
+  </body>
+</html>
