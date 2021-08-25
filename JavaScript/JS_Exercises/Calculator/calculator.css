@@ -1,5 +1,11 @@
 * {
   margin: 0;
+  font-weight: bold;
+}
+
+:root {
+  --calculator-width: 200px;
+  --calculator-height: 300px;
 }
 
 div#container {
@@ -11,14 +17,14 @@ div#container {
 }
 
 div#calculator {
-  height: 300px;
-  width: 200px;
+  height: var(--calculator-height);
+  width: var(--calculator-width);
   background-color: gray;
   border-radius: 5px;
 
   position: relative;
-  left: 50%;
-  top: 25%;
+  left: calc(50% - (0.5*var(--calculator-width)));
+  top: calc(50% - (0.5*var(--calculator-height)));
 
   display: flex;
   flex-direction: column;
@@ -28,20 +34,19 @@ div#calculator {
 div#screen {
   margin-top: 10px;
   margin-bottom: 10px;
-  width: 200px;
-  height: 100px;
+  width: var(--calculator-width);
+  height: calc(var(--calculator-height) / 3);
   background-color: white;
   text-indent: 10px;
   padding-top: 5px;
 }
 
 button {
-  width: 47px;
-  height: 40px;
+  width: calc((var(--calculator-width) / 4) - 3px);
+  height: calc((2/3) * var(--calculator-height) / 4 - 10px);
   background-color: gray;
   border: none;
 
-  font-weight: bold;
   color: white;
 }
 
