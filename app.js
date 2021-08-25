@@ -12,6 +12,7 @@ app.use(express.static('JavaScript/JS_Exercises/AddAndRemoveItems'));
 app.use(express.static('JavaScript/JS_Exercises/AddToList'));
 app.use(express.static('JavaScript/JS_Exercises/Async_Await'));
 app.use(express.static('JavaScript/JS_Exercises/BrowserOM'));
+app.use(express.static('JavaScript/JS_Exercises/Calculator'));
 app.use(express.static('JavaScript/JS_Exercises/Classes'));
 app.use(express.static('JavaScript/JS_Exercises/CreateElements'));
 app.use(express.static('JavaScript/JS_Exercises/Form'));
