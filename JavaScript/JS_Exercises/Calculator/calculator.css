@@ -1,11 +1,12 @@
 * {
   margin: 0;
   font-weight: bold;
+  font-size: x-large;
 }
 
 :root {
-  --calculator-width: 200px;
-  --calculator-height: 300px;
+  --calculator-width: 300px;
+  --calculator-height: 600px;
 }
 
 div#container {
@@ -37,13 +38,14 @@ div#screen {
   width: var(--calculator-width);
   height: calc(var(--calculator-height) / 3);
   background-color: white;
-  text-indent: 10px;
   padding-top: 5px;
+  text-indent: 10px;
+  /* font-size: x-large; */
 }
 
 button {
-  width: calc((var(--calculator-width) / 4) - 3px);
-  height: calc((2/3) * var(--calculator-height) / 4 - 10px);
+  width: calc((var(--calculator-width) / 4) - 5px);
+  height: calc((2/3) * var(--calculator-height) / 4 - 15px);
   background-color: gray;
   border: none;
 
@@ -52,4 +54,8 @@ button {
 
 button:hover {
   background-color: darkgray;
+}
+
+button.operators {
+  /* font-size: large; */
 }
