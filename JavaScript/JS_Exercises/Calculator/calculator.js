@@ -7,8 +7,6 @@ const equalButton = document.getElementById('equal')
 const calculatorScreen = document.getElementById('screen');
 
 let screenText = '';
-let currentOperator = '';
-
 
 // all buttons should display their text on the screen, except clear(C) and equal(=)
 if (digits && calculatorScreen) {
@@ -16,20 +14,38 @@ if (digits && calculatorScreen) {
     digits[i].addEventListener('click', function(e) {
       screenText += e.target.innerHTML;
       calculatorScreen.innerHTML = screenText;
-      // console.log(`Text: ${screenText}`);
+      console.log(`Text: ${screenText}`);
     });
   }
+
+  document.body.addEventListener('keypress', function(e) {
+    let key = e.keyCode;
+
+    if (key >= 48 && key <= 57) {
+      screenText += e.key;
+    } else if (key === 13 || key === 61) {
+      screenText = addOperator(` = `, screenText);
+      calculate(screenText);
+    } else if (key === 42) {
+      screenText = addOperator(` * `, screenText);
+    } else if (key === 43) {
+      screenText = addOperator(` + `, screenText);
+    } else if (key === 45) {
+      screenText = addOperator(` - `, screenText);
+    } else if (key === 47) {
+      screenText = addOperator(` / `, screenText);
+    }
+    calculatorScreen.innerHTML = screenText;
+  });
 }
 
 if (operators) {
   for (let i = 0; i < operators.length; i++) {
     operators[i].addEventListener('click', function(e) {
-      if (currentOperator === '' && screenText !== '') {
-        currentOperator = e.target.innerHTML;
-        console.log(`Operator: ${currentOperator}`);
-        screenText += ` ${currentOperator} `;
+
+      if (screenText !== '') {
+        screenText = addOperator(e.target.innerHTML, screenText);
         calculatorScreen.innerHTML = screenText;
-        // console.log(`Text: ${screenText}`);
       }
     });
   }
@@ -39,46 +55,32 @@ if (clearButton) {
   clearButton.addEventListener('click', function() {
     deleteCurrentExpression();
     calculatorScreen.innerHTML = '';
-    console.log(`Cleared? --> ${currentOperator === '' && screenText === '' && calculatorScreen.innerHTML === ''}`);
   });
 }
 
-
 if (equalButton) {
   equalButton.addEventListener('click', function() {
-    let pattern = /(\+|\-|\*|\/)/;
-    let expression = screenText.split(pattern);
-
-    let result = '';
-
-    if (screenText !== '') {
-      console.log(`Expression: ${expression}`);
-
-      let first = Number(expression[0]);
-      let arithmeticOperator = expression[1];
-      let second = Number(expression[2]);
-
-      if (first && second) {
-        if (arithmeticOperator === '+') {
-          result = first + second;
-        } else if (arithmeticOperator === '-') {
-          result = first - second;
-        } else if (arithmeticOperator === '*') {
-          result = first * second;
-        } else if (arithmeticOperator === '/') {
-          result = first / second;
-        }
-
-        screenText += ` = ${result}`;
-        calculatorScreen.innerHTML = screenText;
-        // prepare for possible new calculation
-        deleteCurrentExpression();
-      }
-    }
+    console.log('Click event for equal button');
+    calculate(screenText);
   });
+}
 
-  function deleteCurrentExpression() {
-    screenText = '';
-    currentOperator = '';
+function deleteCurrentExpression() {
+  screenText = '';
+  currentOperator = '';
+}
+
+function calculate(string) {
+  let expression = string.split(' ');
+  console.log(expression);
+}
+
+function addOperator(operator, expression) {
+  let length = expression.length;
+  operator = ` ${operator} `;
+
+  if (expression[length - 1] === ' ') {
+    return expression.slice(0, length - 3) + operator;
   }
+  return expression + operator;
 }
