@@ -1,7 +1,8 @@
 * {
   margin: 0;
   font-weight: bold;
-  font-size: x-large;
+  font-size: xx-large;
+  background-color: gray;
 }
 
 :root {
@@ -20,8 +21,8 @@ div#container {
 div#calculator {
   height: var(--calculator-height);
   width: var(--calculator-width);
-  background-color: gray;
   border-radius: 5px;
+  box-shadow: 5px 5px 5px 5px black;
 
   position: relative;
   left: calc(50% - (0.5*var(--calculator-width)));
@@ -33,22 +34,24 @@ div#calculator {
 }
 
 div#screen {
+  padding-top: 5px;
   margin-top: 10px;
   margin-bottom: 10px;
   width: var(--calculator-width);
   height: calc(var(--calculator-height) / 3);
   background-color: white;
-  padding-top: 5px;
   text-indent: 10px;
-  /* font-size: x-large; */
+  letter-spacing: 2px;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 button {
-  width: calc((var(--calculator-width) / 4) - 5px);
-  height: calc((2/3) * var(--calculator-height) / 4 - 15px);
-  background-color: gray;
+  width: calc((var(--calculator-width) / 4) - 10px);
+  height: calc((2/3) * var(--calculator-height) / 4 - 10px);
   border: none;
-
+  border-radius: 3px;
+  text-shadow: 2px 2px black;
   color: white;
 }
 
@@ -56,6 +59,13 @@ button:hover {
   background-color: darkgray;
 }
 
-button.operators {
-  /* font-size: large; */
+button:not(button.digits, button#clear) {
+  color: goldenrod;
+  text-shadow: 2px 2px black;
+  font-size: xxx-large;
+}
+
+button#clear {
+  color: red;
+  text-shadow: 2px 2px darkred;
 }
