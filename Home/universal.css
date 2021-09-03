@@ -19,6 +19,7 @@ header {
   padding: 10px;
   text-align: center;
   color: white;
+  width: 100vw;
 }
 
 nav {
@@ -29,6 +30,7 @@ nav {
 nav > a {
   padding: 20px;
   color: white;
+  width: fit-content;
 }
 
 nav > a:hover {
