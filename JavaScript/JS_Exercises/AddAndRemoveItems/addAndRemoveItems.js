@@ -80,7 +80,7 @@ function addListenerToTrashcan(trashcanIcon) {
 
 function addListItem(itemText) {
   var image = document.createElement("img");
-  image.src = "Z:/home/owhyze1/coding/websitePractice/resources/trashcan.jpg";
+  image.src = "/trashcan.jpg";
 
   var button = document.createElement("button");
   button.appendChild(image);
