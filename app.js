@@ -20,6 +20,7 @@ app.use(express.static('JavaScript/JS_Exercises/MouseEvents'));
 app.use(express.static('JavaScript/JS_Exercises/WatchShowcase'));
 app.use(express.static('Notes'));
 app.use(express.static('React'));
+app.use(express.static('resources'));
 
 app.get('/', (request, response) => {
   response.send('index.html');
