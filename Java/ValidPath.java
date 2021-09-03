@@ -1,5 +1,4 @@
 import java.util.HashMap;
-import java.util.Map;
 import java.util.HashSet;
 
 public class ValidPath {
@@ -68,8 +67,10 @@ public class ValidPath {
 
     // recursive case(s)
     valid = canMove(direction[0], grid, visited, row, col);
-    if (!valid)
+    if (!valid) {
+      visited.remove(row + " " + col);
       valid = canMove(direction[1], grid, visited, row, col);
+    }
 
     return valid;
   }
@@ -124,41 +125,42 @@ public class ValidPath {
 
     System.out.println(hasValidPath(grid)); // true
 
-    // grid = new int[2][3];
+    grid = new int[2][3];
 
-    // grid[0] = new int[]{2, 4, 3};
-    // grid[1] = new int[]{6, 5, 2};
+    grid[0] = new int[]{2, 4, 3};
+    grid[1] = new int[]{6, 5, 2};
 
-    // System.out.println(hasValidPath(grid)); // true
+    System.out.println(hasValidPath(grid)); // true
 
-    // grid[0] = new int[]{1, 2, 1};
-    // grid[1] = new int[]{1, 2, 1};
+    grid[0] = new int[]{1, 2, 1};
+    grid[1] = new int[]{1, 2, 1};
 
-    // System.out.println(hasValidPath(grid)); // false
+    System.out.println(hasValidPath(grid)); // false
 
-    // grid[0] = new int[] {1, 1, 2};
+    grid[0] = new int[] {1, 1, 2};
 
-    // System.out.println(hasValidPath(grid)); // false
+    System.out.println(hasValidPath(grid)); // false
 
-    // grid = new int[1][7];
-    // grid[0] = new int[]{1, 1, 1, 1, 1, 1, 3};
+    grid = new int[1][7];
+    grid[0] = new int[]{1, 1, 1, 1, 1, 1, 3};
 
-    // System.out.println(hasValidPath(grid)); // true
+    System.out.println(hasValidPath(grid)); // true
 
-    // grid = new int[7][1];
+    grid = new int[7][1];
 
-    // grid[0] = new int[]{2};
-    // grid[1] = new int[]{2};
-    // grid[2] = new int[]{2};
-    // grid[3] = new int[]{2};
-    // grid[4] = new int[]{2};
-    // grid[5] = new int[]{2};
-    // grid[6] = new int[]{6};
+    grid[0] = new int[]{2};
+    grid[1] = new int[]{2};
+    grid[2] = new int[]{2};
+    grid[3] = new int[]{2};
+    grid[4] = new int[]{2};
+    grid[5] = new int[]{2};
+    grid[6] = new int[]{6};
 
-    // System.out.println(hasValidPath(grid)); // true
+    System.out.println(hasValidPath(grid)); // true
 
     /*
     EXPECTED
+    true
     true
     false
     false
