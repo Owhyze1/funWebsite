@@ -17,8 +17,11 @@ public class BreadthFirstSearch {
       if (node.right != null)
         queue.add(node.right);
 
-      System.out.print(node.value + " ");
+
+      if (node != null)
+        System.out.print(node.value + " ");
     }
+    System.out.println();
   }
 
   public static void main(String[] args) {
