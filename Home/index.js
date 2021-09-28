@@ -1,18 +1,28 @@
 // import { javascript } from 'links.js';
 
-const button = document.getElementById("js");
+const jsButton = document.getElementById("js");
+const reactButton = document.getElementById('react');
+const freeCodeCampButton = document.getElementById('freeCodeCamp');
 const interviewButton = document.getElementById("interviewing");
+const troubleshootingButton = document.getElementById('troubleshooting');
 const hackForLaButton = document.getElementById("hackforla");
-const troubleshootingElem = document.getElementById('troubleshooting');
-const reactElem = document.getElementById('react');
 
 const troubleshootingHref = '/troubleshooting.html';
 const reactHref = '/reactNotes.html';
+const freeCodeCampHref = '/freecodecamp.html';
 
 
-button.addEventListener("click", function() {
+jsButton.addEventListener("click", function() {
   console.log('Button clicked');
   location.href = 'javascript.html';
+});
+
+reactButton.addEventListener('click', function() {
+  location.href = reactHref;
+});
+
+freeCodeCampButton.addEventListener('click', function() {
+  location.href = freeCodeCampHref;
 });
 
 interviewButton.addEventListener("click", function() {
@@ -25,10 +35,8 @@ hackforla.addEventListener("click", function() {
   location.href = 'HackForLA.html';
 });
 
-troubleshootingElem.addEventListener('click', function() {
+troubleshootingButton.addEventListener('click', function() {
   location.href = troubleshootingHref;
 });
 
-reactElem.addEventListener('click', function() {
-  location.href = reactHref;
-});
+
