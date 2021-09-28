@@ -31,3 +31,4 @@ public class BreadthFirstSearch {
   }
 
 }
+// PREORDER = [1 (2 (4))(3 (2 (4)) (4))]
